@@ -614,6 +614,32 @@ section,
   color: var(--accent-color);
 }
 
+/* Ensure the hero section positions its children correctly */
+#hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Style the video as a background */
+#hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Ensure the container with text appears above the video */
+#hero .container {
+  position: relative;
+  z-index: 2;
+  color: #fff; /* Adjust text color for readability */
+  padding: 100px 15px; /* Adjust as needed */
+}
+
+
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 32px;
@@ -635,7 +661,8 @@ section,
 #resume.section,
 #portfolio.section,
 #contact.section,
-#skills.section {
+#skills.section,
+#courses.section {
   padding: 20px 0 !important; /* or whatever you prefer */
 }
 
