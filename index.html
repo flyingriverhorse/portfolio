@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Murat Unsal - Data Scientist Portfolio" />
+  <title>Murat Unsal | Data Scientist Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;}
+    body {font-family:'Poppins',sans-serif;background:#121212;color:#e0e0e0;line-height:1.6;}
+    header {text-align:center;padding:60px 20px;}
+    header img {width:140px;height:140px;border-radius:50%;border:3px solid #00bfa6;}
+    header h1 {margin-top:20px;font-size:2.5rem;font-weight:700;}
+    header p {color:#bbb;}
+    .btn {display:inline-block;margin-top:20px;padding:10px 25px;background:#00bfa6;color:#121212;border-radius:5px;text-decoration:none;font-weight:600;transition:background 0.3s;}
+    .btn:hover {background:#00a68e;}
+
+    section {padding:60px 20px;max-width:1000px;margin:auto;}
+    h2.section-title {color:#00bfa6;font-size:1.8rem;margin-bottom:25px;text-align:center;}
+    p {margin-bottom:20px;}
+
+    /* About */
+    #about {text-align:center;}
+    #about p {max-width:700px;margin:15px auto;}
+
+    /* Skills */
+    #skills .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center;}
+    .skill-card {background:#1e1e1e;padding:20px;border-radius:10px;transition:transform 0.3s;}
+    .skill-card:hover {transform:translateY(-5px);}
+
+    /* Projects */
+    #projects .grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;}
+    .project-card {background:#1e1e1e;border-radius:10px;padding:25px;transition:transform 0.3s;}
+    .project-card:hover {transform:translateY(-5px);}
+    .project-card h3 {color:#00bfa6;margin-bottom:10px;}
+
+    /* Background */
+    #background ul {list-style:none;max-width:700px;margin:auto;}
+    #background li {background:#1e1e1e;margin:10px 0;padding:15px;border-radius:8px;}
+    #background h4 {color:#00bfa6;}
+
+    /* Experience */
+    #experience .exp {background:#1e1e1e;padding:20px;border-radius:10px;margin-bottom:20px;}
+    #experience h3 {color:#00bfa6;margin-bottom:10px;}
+    #experience ul {margin-left:20px;}
+
+    /* Contact */
+    #contact {text-align:center;}
+    #contact a {color:#00bfa6;text-decoration:none;}
+
+    footer {text-align:center;padding:20px;background:#1e1e1e;margin-top:40px;color:#777;}
+      /* Animations */
+    html { scroll-behavior: smooth; }
+    .reveal {opacity:0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease;}
+    .reveal.active {opacity:1; transform: none;}
+    .stagger > * {opacity:0; transform: translateY(14px);}
+    .stagger.active > * {opacity:1; transform:none;}
+    .stagger.active > * { transition: opacity .6s ease, transform .6s ease; }
+    .stagger.active > *:nth-child(1){ transition-delay:.05s }
+    .stagger.active > *:nth-child(2){ transition-delay:.12s }
+    .stagger.active > *:nth-child(3){ transition-delay:.18s }
+    .stagger.active > *:nth-child(4){ transition-delay:.24s }
+    .stagger.active > *:nth-child(5){ transition-delay:.30s }
+    .stagger.active > *:nth-child(6){ transition-delay:.36s }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .stagger > * { transition: none !important; transform: none !important; opacity: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/img/my-profile-img.jpg" alt="Murat Unsal Photo">
+    <h1>Murat H. Unsal</h1>
+    <p>Data Scientist | Machine Learning | Automation & Risk Analytics</p>
+    <a href="#projects" class="btn">View Projects</a>
+      <div class="reveal" aria-hidden="true"></div>
+  </header>
+
+  <section id="about" class="reveal">
+    <h2 class="section-title">About</h2>
+    <p>I’m a Data Scientist with over 3 years of experience developing data-driven and machine learning solutions in risk and fraud detection. With a PhD background in Environmental Science, I bring strong analytical rigor, scientific thinking, and practical problem-solving skills to build impactful models and tools for business efficiency.</p>
+  </section>
+
+  <section id="skills" class="reveal">
+    <h2 class="section-title">Skills</h2>
+    <div class="grid stagger">
+      <div class="skill-card">Python</div>
+      <div class="skill-card">SQL</div>
+      <div class="skill-card">Machine Learning</div>
+      <div class="skill-card">Data Visualization</div>
+      <div class="skill-card">Statistical Analysis</div>
+      <div class="skill-card">FastAPI</div>
+      <div class="skill-card">Streamlit</div>
+      <div class="skill-card">Power BI</div>
+    </div>
+  </section>
+
+  <section id="projects" class="reveal">
+    <h2 class="section-title">Projects</h2>
+    <div class="grid stagger">
+      <div class="project-card">
+        <h3>Fraud Detection ML Model</h3>
+        <p>Developed a Python-based model to detect high-risk transactions with ~85% precision, improving fraud investigation efficiency.</p>
+      </div>
+      <div class="project-card">
+        <h3>Rule Search Engine</h3>
+        <p>Built a centralized engine for risk rule search and analytics, reducing cross-team query workload by 40%.</p>
+      </div>
+      <div class="project-card">
+        <h3>Automation & Monitoring System</h3>
+        <p>Created a Python automation tool to monitor system performance and rule hit metrics in real time.</p>
+      </div>
+      <div class="project-card">
+        <h3>End-to-End ML Platform (Personal Project)</h3>
+        <p>Designing a no-code ML platform that automates data exploration, model training, and deployment-ready pipelines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="background" class="reveal">
+    <h2 class="section-title">Background</h2>
+    <ul>
+      <li><h4>PhD in Environmental Sciences</h4><p>Vilnius University, Lithuania (2020–2025) – Focused on data-driven environmental modeling and statistical risk analysis.</p></li>
+      <li><h4>MSc in Environmental Engineering</h4><p>Namık Kemal University, Turkey (2017–2019)</p></li>
+      <li><h4>BSc in Environmental Engineering</h4><p>Bartın University, Turkey (2009–2013, Honors)</p></li>
+    </ul>
+  </section>
+
+  <section id="experience" class="reveal">
+    <h2 class="section-title">Experience</h2>
+    <div class="exp">
+      <h3>System Analyst (Data Scientist) – Western Union (2023–Present)</h3>
+      <ul>
+        <li>Developed automation tools reducing manual reporting time by 70%.</li>
+        <li>Built ML models improving fraud detection accuracy (~85% precision).</li>
+        <li>Designed a rule analytics engine increasing transparency and collaboration across teams.</li>
+      </ul>
+    </div>
+    <div class="exp">
+      <h3>PhD Research Assistant – Vilnius University (2020–2025)</h3>
+      <ul>
+        <li>Applied machine learning to environmental datasets (>10k samples).</li>
+        <li>Published peer-reviewed research combining data science and environmental modeling.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2 class="section-title">Contact</h2>
+    <p>📍 Vilnius, Lithuania</p>
+    <p>📧 <a href="mailto:murath.unsal@hotmail.com">murath.unsal@hotmail.com</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/murat-u/" target="_blank">LinkedIn</a></p>
+    <p>💻 <a href="https://flyingriverhorse.github.io/portfolio/" target="_blank">Portfolio</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Murat Huseyin Unsal – All Rights Reserved</p>
+  </footer>
+  <script>
+    // Intersection Observer to reveal elements on scroll
+    const revealOnScroll = (targets, options={ threshold: 0.08 }) => {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            io.unobserve(entry.target);
+          }
+        });
+      }, options);
+      targets.forEach(el => io.observe(el));
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const reveals = Array.from(document.querySelectorAll('.reveal'));
+      const staggers = Array.from(document.querySelectorAll('.stagger'));
+
+      // Mark children of stagger containers for a nicer cascading effect
+      staggers.forEach(group => {
+        // activate container when in view, then CSS handles delays
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              io.unobserve(entry.target);
+            }
+          });
+        }, {threshold: 0.08});
+        io.observe(group);
+      });
+
+      revealOnScroll(reveals);
+    });
+  </script>
+</body>
+</html>
